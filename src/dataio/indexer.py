@@ -1,13 +1,22 @@
-import os
 import csv
+import os
 import re
-from src.paths import DATASET_ROOT,METADATA_CSV
+
+from src.paths import DATASET_ROOT, METADATA_CSV
 
 # Regex to parse filenames like: 123__M_Left_index_finger
 filename_re = re.compile(r"(?P<id>\d+)__([MF])_(?P<hand>Left|Right)_(?P<finger>\w+)")
 
 # Metadata header
-header = ["person_id", "hand", "finger", "difficulty", "alteration", "filename", "filepath"]
+header = [
+    "person_id",
+    "hand",
+    "finger",
+    "difficulty",
+    "alteration",
+    "filename",
+    "filepath",
+]
 
 rows = []
 
@@ -37,7 +46,7 @@ for person in os.listdir(DATASET_ROOT):
                     "original",
                     "none",
                     fname,
-                    os.path.join(difficulty_dir, fname)
+                    os.path.join(difficulty_dir, fname),
                 ]
                 rows.append(row)
             continue
@@ -59,7 +68,7 @@ for person in os.listdir(DATASET_ROOT):
                     difficulty.replace("Altered_", "").lower(),
                     alteration,
                     fname,
-                    os.path.join(alteration_dir, fname)
+                    os.path.join(alteration_dir, fname),
                 ]
                 rows.append(row)
 
