@@ -1,5 +1,5 @@
 [project]
-name = "fingerprint-verification-ml"
+name = "fingerprint-matching-ML"
 version = "0.1.0"
 description = "Robust Fingerprint Matching under Distortions"
 readme = "README.md"

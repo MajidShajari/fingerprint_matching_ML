@@ -13,7 +13,7 @@ ALTERED_MEDIUM_DIR = DATASET_ROOT / "Altered_Medium"
 ALTERED_HARD_DIR = DATASET_ROOT / "Altered_Hard"
 
 # ---------- Project Outputs ----------
-METADATA_CSV = PROJECT_ROOT / "metadata.csv"
+METADATA_CSV = PROJECT_ROOT / "data" / "index" / "metadata.csv"
 RESULTS_DIR = PROJECT_ROOT / "results"
 MODELS_DIR = PROJECT_ROOT / "models"
 
